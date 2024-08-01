@@ -22,6 +22,8 @@
             width: 80%;
             max-width: 1200px;
             flex-wrap: wrap;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .text-section {
             flex: 1;
@@ -48,36 +50,36 @@
         }
         .image-section {
             flex: 1;
-            width: 400px;
-            height: 400px;
-            background-image: url('Screenshot\ 2024-07-25\ 224129.png');
-            background-size: cover;
-            background-position: center;
+            max-width: 400px;
+            max-height: 400px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
             /* border-radius: 50%; */
-            margin: 20px;
+            /* Optional: add a border for a better look */
+            border: 5px solid white;
         }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
                 align-items: center;
             }
-            .image-section {
-                width: 200px;
-                height: 200px;
-            }
             .animated-text {
                 font-size: 24px;
             }
             .social-links img {
-                width: 30px;
-                height: 30px;
+                width: 25px;
+                height: 25px;
             }
         }
         @media (max-width: 480px) {
-            .image-section {
-                width: 150px;
-                height: 150px;
-            }
             .animated-text {
                 font-size: 18px;
             }
@@ -94,15 +96,17 @@
             <h1>Hi, I am Mujeeb Ahmad</h1>
             <div class="animated-text" id="animatedText"></div>
             <div class="social-links">
-                <a href="https://www.facebook.com" target="_blank"><img src="Instagram-Logo-T-shirt-Black-2.webp" alt="Facebook"></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="1000_F_419084895_QQMFVPfChIrMNMbNC9xpOzqGXOK02HgJ.jpg" alt="Instagram"></a>
-                <a href="https://www.linkedin.com" target="_blank"><img src="linkdin.png" alt="LinkedIn"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="images/Instagram-Logo-T-shirt-Black-2.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/1000_F_419084895_QQMFVPfChIrMNMbNC9xpOzqGXOK02HgJ.jpg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="images/linkdin.png" alt="LinkedIn"></a>
             </div>
         </div>
-        <div class="image-section"></div>
+        <div class="image-section">
+            <img src="images/Screenshot 2024-07-25 224129.png" alt="" class="profile-image">
+        </div>
     </div>
     <script>
-        const texts = ["Full Stack Developer", "Freelancer, Designer"];
+        const texts = ["Full Stack Developer", "Freelancer", "Designer"];
         let currentText = 0;
         let currentChar = 0;
         const animatedTextElement = document.getElementById('animatedText');
