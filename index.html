@@ -6,34 +6,39 @@
     <title>Portfolio</title>
     <style>
         body {
+            margin: 0;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+        }
+        .intro-section {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
-            background-color: black;
-            color: white;
-            font-family: 'Arial', sans-serif;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .container {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            align-items: flex-start;
+            justify-content: flex-start;
             width: 80%;
             max-width: 1200px;
             flex-wrap: wrap;
-            padding: 20px;
-            box-sizing: border-box;
         }
         .text-section {
             flex: 1;
             min-width: 300px;
-            text-align: center;
+            text-align: left;
         }
         .animated-text {
-            font-size: 32px;
+            font-size: 45px;
             font-weight: bold;
-            color: #FFD700;
+            color: #ff8c00;
             margin-top: 20px;
         }
         .social-links {
@@ -50,10 +55,7 @@
         }
         .image-section {
             flex: 1;
-            max-width: 400px;
-            max-height: 400px;
-            width: 100%;
-            height: auto;
+            max-width: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -62,49 +64,156 @@
             width: 100%;
             max-width: 400px;
             height: auto;
-            /* border-radius: 50%; */
-            /* Optional: add a border for a better look */
-            border: 5px solid white;
+        }
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            /* background-color: #1e1e1e; */
+            background-image: url(images/software_architecture_8470adc29e.jpg);
+            background-size: cover;
+            background-position: center;
+
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+        .about-image {
+            flex: 1;
+            max-width: 300px;
+            margin-right: 20px;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .about-text {
+            flex: 2;
+            text-align: left;
+            /* background-image:url(bgpart2.jpg) ; */
+        }
+        .about-heading {
+            font-size: 36px;
+            color: #00adb5;
+            margin-bottom: 20px;
+        }
+        .about-description {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .about-details {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .about-details b {
+            color: #00adb5;
         }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
                 align-items: center;
             }
+            .text-section {
+                text-align: center;
+            }
             .animated-text {
-                font-size: 24px;
+                font-size: 35px;
             }
             .social-links img {
                 width: 25px;
                 height: 25px;
             }
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .about-text {
+                text-align: center;
+            }
+            .about-heading {
+                font-size: 28px;
+            }
+            .about-description, .about-details {
+                font-size: 16px;
+            }
         }
         @media (max-width: 480px) {
             .animated-text {
-                font-size: 18px;
+                font-size: 24px;
             }
             .social-links img {
                 width: 20px;
                 height: 20px;
             }
+            .about-heading {
+                font-size: 24px;
+            }
+            .about-description, .about-details {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="text-section">
-            <h1>Hi, I am Mujeeb Ahmad</h1>
-            <div class="animated-text" id="animatedText"></div>
-            <div class="social-links">
-                <a href="https://www.facebook.com" target="_blank"><img src="Instagram-Logo-T-shirt-Black-2.webp" alt="Facebook"></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="1000_F_419084895_QQMFVPfChIrMNMbNC9xpOzqGXOK02HgJ.jpg" alt="Instagram"></a>
-                <a href="https://www.linkedin.com" target="_blank"><img src="linkdin.png" alt="LinkedIn"></a>
+    <div class="intro-section">
+        <div class="container">
+            <div class="text-section">
+                <h2 style="color: #ff8c00;">Hello, my name is</h2>
+                <h1>Mujeeb Ahmad</h1>
+                <h1>and I am</h1>
+                <div class="animated-text" id="animatedText"></div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><img src="images/Instagram-Logo-T-shirt-Black-2.webp" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="images/1000_F_419084895_QQMFVPfChIrMNMbNC9xpOzqGXOK02HgJ.jpg" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com" target="_blank"><img src="images/linkdin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/" alt="" class="profile-image">
             </div>
         </div>
-        <div class="image-section">
-            <img src="Screenshot 2024-07-25 224129.png" alt="" class="profile-image">
+    </div>
+
+    <div class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="mujeeb2.jpg" alt="Mujeeb Ahmad">
+            </div>
+            <div class="about-text">
+                 <div class="about">
+                    <h1 class="text-center" style="color: #00adb5;">About</h1>
+                    <p>I am a passionate Web App Developer with Professional experience. I always strive to achieve the highest standard possible at any given task and i like to working in a challenging fast-paced environment.
+
+                       
+                 </div>
+
+
+                <h2 class="about-heading">Full Stack Developer & Frontend Developer</h2>
+                <p class="about-description">An IT Professional with Full Stack Development in most of the Programming Frameworks like .Net, Laravel, Angular. Experienced vastly in frontend development using the latest technologies, great for the user experience and user design. Development on PHP  Laravel, ASP.Net Core. Experienced in completing Both Office based and persnol projects .</p>
+                <div class="about-details">
+                    <p><b>Birthday:</b> 12<sup>th</sup> Marach</p>
+                    <p><b>Email:</b>mujeebahmadhafeez@gmail.com</p>
+                    <!-- <p><b>Website:</b> <a href="https://addiybaba1.github.io/Developer" style="color: #00adb5; text-decoration: none;">addiybaba1.github.io/Developer</a></p> -->
+                    <p><b>Phone:</b> 0335-7462325</p>
+                    <p><b>City:</b> Pakistan, Karachi</p>
+                    <p><b>Freelance:</b> Available</p>
+                </div>
+            </div>
         </div>
     </div>
+
     <script>
         const texts = ["Full Stack Developer", "Freelancer", "Designer"];
         let currentText = 0;
